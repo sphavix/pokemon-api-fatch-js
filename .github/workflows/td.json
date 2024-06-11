@@ -1,0 +1,59 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:533267023956:task-definition/pokemon",
+    "containerDefinitions": [
+        {
+            "name": "pokemon",
+            "image": "533267023956.dkr.ecr.ap-south-1.amazonaws.com/pokemon_repo",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "pokemon",
+    "taskRoleArn": "arn:aws:iam::533267023956:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::533267023956:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2024-06-11T09:11:09.726Z",
+    "registeredBy": "arn:aws:iam::533267023956:user/aws-plurals",
+    "tags": []
+}
